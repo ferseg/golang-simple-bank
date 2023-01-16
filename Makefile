@@ -19,4 +19,10 @@ sqlc:
 test:
 	go test -v -cover ./...
 
-.PHONY: postgres create-db drop-db migrate-up migrate-down sqlc
+server:
+	go run main.go
+
+mockgen:
+	mockgen -package mockdb -destination db/mock/store.go github.com/ferseg/golang-simple-bank/db/sqlc Store
+
+.PHONY: postgres create-db drop-db migrate-up migrate-down sqlc mockgen
