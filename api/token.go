@@ -6,8 +6,6 @@ import (
 	"net/http"
 	"time"
 
-	db "github.com/ferseg/golang-simple-bank/db/sqlc"
-	"github.com/ferseg/golang-simple-bank/util"
 	"github.com/gin-gonic/gin"
 )
 
